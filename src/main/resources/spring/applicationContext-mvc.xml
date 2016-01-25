@@ -45,13 +45,15 @@
 				<property name="entityManagerFactory" ref="entityManagerFactory" />
 			</bean>
 		</mvc:interceptor>
+		<!-- 
 		<mvc:interceptor>
 			<mvc:mapping path="/admin/**" />
 			<bean id="listInterceptor" class="net.shopxx.interceptor.ListInterceptor" />
 		</mvc:interceptor>
+		 -->
 		<mvc:interceptor>
 			<mvc:mapping path="/admin/**" />
-			<bean id="logInterceptor" class="net.shopxx.interceptor.LogInterceptor" />
+			<bean id="logInterceptor" class="com.leoman.interceptor.LogInterceptor" />
 		</mvc:interceptor>
 	</mvc:interceptors>
 
@@ -61,7 +63,7 @@
 	
 	<!--JSP视图解析器-->
     <bean id="viewResolverJsp" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/template/"/>
+        <property name="prefix" value="/WEB-INF/template/admin"/>
         <property name="suffix" value=".jsp"/>
         <property name="viewClass" value="org.springframework.web.servlet.view.InternalResourceView"/>
         <property name="order" value="1"/>
