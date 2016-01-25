@@ -138,6 +138,12 @@
 
 	<error-page>
 		<error-code>404</error-code>
-		<location>/common/resource_not_found.jhtml</location>
+		<location>/common/error/404.jhtml</location>
+		
+	</error-page>
+	
+	<error-page>
+		<error-code>500</error-code>
+		<location>/common/error/500.jhtml</location>
 	</error-page>
 </web-app>

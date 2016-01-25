@@ -3,13 +3,19 @@ package com.leoman.baisc.entity;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
+import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-public class BaseEntity implements Serializable{
+import com.leoman.listener.EntityListener;
+
+@MappedSuperclass
+@EntityListeners(EntityListener.class)
+public abstract class BaseEntity implements Serializable{
 
 	private static final long serialVersionUID = 5054785858597176153L;
 
