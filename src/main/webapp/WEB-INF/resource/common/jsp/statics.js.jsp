@@ -1,16 +1,18 @@
-<!-- Javascript Libraries -->
-<!-- jQuery -->
-<script src="js/jquery.min.js"></script>
-<!-- jQuery Library -->
-<!-- Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
-<!-- UX -->
-<script src="js/scroll.min.js"></script>
-<!-- Custom Scrollbar -->
-<!-- Other -->
-<script src="js/calendar.min.js"></script>
-<!-- Calendar -->
-<script src="js/feeds.min.js"></script>
-<!-- News Feeds -->
-<!-- All JS functions -->
-<script src="js/functions.js"></script>
+<script src="${contextPath}/resource/admin/js/jquery.min.js"></script>
+<script src="${contextPath}/resource/admin/js/jquery-ui.min.js"></script>
+<script src="${contextPath}/resource/admin/js/jquery.easing.1.3.js"></script>
+<script src="${contextPath}/resource/admin/js/bootstrap.min.js"></script>
+<script src="${contextPath}/resource/admin/js/charts/jquery.flot.js"></script>
+<script src="${contextPath}/resource/admin/js/charts/jquery.flot.time.js"></script>
+<script src="${contextPath}/resource/admin/js/charts/jquery.flot.animator.min.js"></script>
+<script src="${contextPath}/resource/admin/js/charts/jquery.flot.resize.min.js"></script>
+<script src="${contextPath}/resource/admin/js/sparkline.min.js"></script>
+<script src="${contextPath}/resource/admin/js/easypiechart.js"></script>
+<script src="${contextPath}/resource/admin/js/charts.js"></script>
+<script src="${contextPath}/resource/admin/js/maps/jvectormap.min.js"></script>
+<script src="${contextPath}/resource/admin/js/maps/usa.js"></script>
+<script src="${contextPath}/resource/admin/js/icheck.js"></script>
+<script src="${contextPath}/resource/admin/js/scroll.min.js"></script>
+<script src="${contextPath}/resource/admin/js/calendar.min.js"></script>
+<script src="${contextPath}/resource/admin/js/feeds.min.js"></script>
+<script src="${contextPath}/resource/admin/js/functions.js"></script>

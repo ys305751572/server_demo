@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<!--[if IE 9 ]><html class="ie9"><![endif]-->
-    <head>
+<%@page language="java" contentType="text/html; charset=utf-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <head lang="zh-CN">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
         <meta name="format-detection" content="telephone=no">
         <meta charset="UTF-8">
