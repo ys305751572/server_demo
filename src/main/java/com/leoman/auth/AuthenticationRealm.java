@@ -26,7 +26,7 @@ import com.leoman.admin.service.AdminService;
 import com.leoman.auth.entity.AuthenticationToken;
 import com.leoman.baisc.entity.Setting;
 import com.leoman.baisc.entity.Setting.AccountLockType;
-import com.leoman.captcha.entity.Setting.CaptchaType;
+import com.leoman.baisc.entity.Setting.CaptchaType;
 import com.leoman.captcha.service.CaptchaService;
 import com.leoman.utils.SettingUtils;
 

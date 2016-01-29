@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/leoman/baisc/dao/BaseDao.java=UTF-8
 encoding//src/main/resources/config/leoman.properties=UTF-8
+encoding//src/main/webapp/WEB-INF/template/admin/index/login.jsp=UTF-8
+encoding/<project>=UTF-8

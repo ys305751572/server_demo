@@ -2,8 +2,7 @@ package com.leoman.captcha.service;
 
 import java.awt.image.BufferedImage;
 
-import com.leoman.captcha.entity.Setting.CaptchaType;
-
+import com.leoman.baisc.entity.Setting.CaptchaType;
 /**
  * Service - 验证码
  * 
