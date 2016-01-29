@@ -21,11 +21,9 @@
         <link href="css/generics.css" rel="stylesheet"> 
     </head>
     <body id="skin-cloth">
-
         <header id="header" class="media">
             <a href="" id="menu-toggle"></a> 
             <a class="logo pull-left" href="index.html">SUPER ADMIN 1.0</a>
-            
             <div class="media-body">
                 <div class="media" id="top-menu">
                     <div class="pull-left tm-icon">
@@ -42,9 +40,6 @@
                             <span>Updates</span>
                         </a>
                     </div>
-
-                    
-
                     <div id="time" class="pull-right">
                         <span id="hours"></span>
                         :

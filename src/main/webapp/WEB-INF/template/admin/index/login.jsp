@@ -1,24 +1,16 @@
 <%@page language="java" contentType="text/html; charset=utf-8" pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/views/include.inc.jsp"%>
+<%@ include file="/WEB-INF/resource/common/jsp/include.inc.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
         <meta name="format-detection" content="telephone=no">
         <meta charset="UTF-8">
-
         <meta name="description" content="Violate Responsive Admin Template">
         <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
-
         <title>Super Admin Responsive Template</title>
-            
         <!-- CSS -->
-        <link href="${contextPath}/resource/css/bootstrap.min.css" rel="stylesheet">
-        <link href="${contextPath}/resource/css/form.css" rel="stylesheet">
-        <link href="${contextPath}/resource/css/style.css" rel="stylesheet">
-        <link href="${contextPath}/resource/css/animate.css" rel="stylesheet">
-        <link href="${contextPath}/resource/css/generics.css" rel="stylesheet"> 
-        <link href="${contextPath}/resource/css/login.css" rel="stylesheet"> 
+        <%@ include file="/WEB-INF/resource/common/jsp/statics.css.jsp"%>
     </head>
     <body id="skin-blur-violate">
         <section id="login">
@@ -77,16 +69,7 @@
                 <small><a class="box-switcher" data-switch="box-login" href="">Already have an Account?</a></small>
             </form>
         </section>                      
-        
-        <!-- Javascript Libraries -->
-        <!-- jQuery -->
-        <script src="${contextPath}/resource/js/jquery.min.js"></script> <!-- jQuery Library -->
-        <!-- Bootstrap -->
-        <script src="${contextPath}/resource/js/bootstrap.min.js"></script>
-        <!--  Form Related -->
-        <script src="${contextPath}/resource/js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
-        <!-- All JS functions -->
-        <script src="${contextPath}/resource/js/functions.js"></script>
+        <%@ include file="/WEB-INF/resource/common/jsp/statics.js.jsp"%>
         <script type="text/javascript">
         	$(function() {
         		var $loginBtn = $("#loginBtn");
