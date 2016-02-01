@@ -40,8 +40,7 @@
                                                                                   记住账号
                     </label>
                 </div>
-                <button class="btn btn-sm m-r-5" id="loginBtn">Sign In</button>
-                
+                <button class="btn btn-sm m-r-5" id="loginBtn">登录</button>
                 <small>
                     <a class="box-switcher" data-switch="box-register" href="">注册</a> 或
                     <a class="box-switcher" data-switch="box-reset" href="">忘记密码</a>
@@ -50,13 +49,13 @@
             
             <!-- Register -->
             <form class="box animated tile" id="box-register">
-                <h2 class="m-t-0 m-b-15">Register</h2>
+                <h2 class="m-t-0 m-b-15">注册</h2>
                 <input type="text" class="login-control m-b-10" placeholder="Full Name">
                 <input type="text" class="login-control m-b-10" placeholder="Username">
                 <input type="email" class="login-control m-b-10" placeholder="Email Address">    
                 <input type="password" class="login-control m-b-10" placeholder="Password">
                 <input type="password" class="login-control m-b-20" placeholder="Confirm Password">
-                <button class="btn btn-sm m-r-5">Register</button>
+                <button class="btn btn-sm m-r-5">注册</button>
                 <small><a class="box-switcher" data-switch="box-login" href="">Already have an Account?</a></small>
             </form>
             
