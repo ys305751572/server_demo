@@ -10,9 +10,7 @@
 	<div class="side-widgets overflow">
 		<!-- Profile Menu -->
 		<div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
-			<a href="" data-toggle="dropdown"> <img
-				class="profile-pic animated" src="img/profile-pic.jpg" alt="">
-			</a>
+			<a href="" data-toggle="dropdown"> <img class="profile-pic animated" src="img/profile-pic.jpg" alt=""></a>
 			<ul class="dropdown-menu profile-menu">
 				<li><a href="">My Profile</a> <i class="icon left">&#61903;</i><i
 					class="icon right">&#61815;</i></li>
@@ -155,7 +153,8 @@
 				<li><a href="messages.html">Messages</a></li>
 				<li><a href="login.html">Login</a></li>
 				<li><a href="404.html">404 Error</a></li>
-			</ul></li>
+			</ul>
+		</li>
 	</ul>
 </aside>
 <script type="text/javascript">
