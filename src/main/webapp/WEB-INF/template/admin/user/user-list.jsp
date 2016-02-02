@@ -51,7 +51,9 @@
 		</section>
 	</body>
 	<script type="text/javascript">
-		
+		$(function(){
+			findPageMenuByCurrentUser();
+		});
 	</script>
 </form>
 
