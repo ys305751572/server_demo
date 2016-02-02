@@ -1,4 +1,4 @@
-package com.leoman.module;
+package com.leoman.module.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
