@@ -5,9 +5,7 @@ import org.apache.shiro.subject.Subject;
 
 public final class CurrentUser {
 
-	
-	
-	private Subject getSubject() {
+	protected Subject getSubject() {
 		return SecurityUtils.getSubject();
 	}
 }
