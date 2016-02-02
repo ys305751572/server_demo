@@ -16,3 +16,5 @@
 <script src="${contextPath}/resource/admin/js/calendar.min.js"></script>
 <script src="${contextPath}/resource/admin/js/feeds.min.js"></script>
 <script src="${contextPath}/resource/admin/js/functions.js"></script>
+
+<script src="${contextPath}/resource/common/js/page-element.js"></script>
