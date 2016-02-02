@@ -1,4 +1,4 @@
-package com.leoman.admin.entity;
+package com.leoman.auth.entity;
 
 import java.io.Serializable;
 

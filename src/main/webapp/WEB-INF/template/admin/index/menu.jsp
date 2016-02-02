@@ -162,7 +162,7 @@
 
 	// 初始化左侧菜单
 	$(function() {
-		var url = ${contextPath} + "/auth/findAllMenuByRole.jhtml";
+		var url = ${contextPath} + "/auth/findAllMenuByCurrnetUser.jhtml";
 		$.post(url,function(data) {
 			$.each(data.data,function() {
 				var $li = $("<li class='dropdown'><a class='sa-side-table' href=''><span class='menu-item'>"+ this.name +"</span></a>" + 

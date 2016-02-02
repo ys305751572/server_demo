@@ -14,8 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.leoman.admin.dao.AdminDao;
 import com.leoman.admin.entity.Admin;
-import com.leoman.admin.entity.Principal;
 import com.leoman.admin.service.AdminService;
+import com.leoman.auth.entity.Principal;
 import com.leoman.baisc.service.impl.BaseServiceImpl;
 import com.leoman.role.entity.Role;
 

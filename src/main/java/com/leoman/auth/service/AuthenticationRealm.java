@@ -21,9 +21,9 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 
 import com.leoman.admin.entity.Admin;
-import com.leoman.admin.entity.Principal;
 import com.leoman.admin.service.AdminService;
 import com.leoman.auth.entity.AuthenticationToken;
+import com.leoman.auth.entity.Principal;
 import com.leoman.baisc.entity.Setting;
 import com.leoman.baisc.entity.Setting.AccountLockType;
 import com.leoman.baisc.entity.Setting.CaptchaType;
