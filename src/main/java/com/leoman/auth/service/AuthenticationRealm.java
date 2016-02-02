@@ -1,4 +1,4 @@
-package com.leoman.auth;
+package com.leoman.auth.service;
 
 import java.util.Date;
 import java.util.List;

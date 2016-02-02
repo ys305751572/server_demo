@@ -101,7 +101,7 @@
 	</div>
 
 	<!-- Side Menu -->
-	<ul class="list-unstyled side-menu">
+	<ul class="list-unstyled side-menu" id="first-level-menu">
 		<li class="active"><a class="sa-side-home" href="index.html">
 				<span class="menu-item">Dashboard</span>
 		</a></li>
@@ -123,10 +123,11 @@
 				<li><a href="form-examples.html">Form Examples</a></li>
 				<li><a href="form-validation.html">Form Validation</a></li>
 			</ul></li>
-		<li class="dropdown"><a class="sa-side-ui" href=""> <span
-				class="menu-item">User Interface</span>
-		</a>
-			<ul class="list-unstyled menu-item">
+		<li class="dropdown">
+			<a class="sa-side-ui" href=""> 
+				<span class="menu-item">User Interface</span>
+			</a>
+			<ul class="list-unstyled menu-item submenu">
 				<li><a href="buttons.html">Buttons</a></li>
 				<li><a href="labels.html">Labels</a></li>
 				<li><a href="images-icons.html">Images &amp; Icons</a></li>
@@ -134,7 +135,8 @@
 				<li><a href="media.html">Media</a></li>
 				<li><a href="components.html">Components</a></li>
 				<li><a href="other-components.html">Others</a></li>
-			</ul></li>
+			</ul>
+		</li>
 		<li><a class="sa-side-chart" href="charts.html"> <span
 				class="menu-item">Charts</span>
 		</a></li>
@@ -155,5 +157,38 @@
 				<li><a href="404.html">404 Error</a></li>
 			</ul></li>
 	</ul>
-
 </aside>
+<script type="text/javascript">
+
+	// 初始化左侧菜单
+	$(function() {
+		var url = ${contextPath} + "/auth/findAllMenuByRole.jhtml";
+		$.post(url,function(data) {
+			$.each(data.data,function() {
+				var $li = $("<li class='dropdown'><a class='sa-side-table' href=''><span class='menu-item'>"+ this.name +"</span></a>" + 
+					"<ul class='unstyled menu-item submenu'><ul></li>"		
+				);
+				$("#first-level-menu").append($li);
+				renderSubMenu(this.chilred,$li);
+				
+			})
+		});
+	});
+	
+	// 渲染二级菜单
+	var renderSubMenu = function(data,$menu) {
+		$.each(data,function(){
+			var $li = $("<li><a href = '"+ this.url +"' target='iframe'>"+ this.name +"</a></li>");
+			$li.appendTo($menu.find(".submenu:first"));
+		});
+		
+		$menu.find("li.submenu").on("click",function() {
+			var $this = $(this);
+			$("#first-level-menu").find("li").each(function() {
+				$menuLi = $(this);
+				$menuLi.hasClass("active") && $menuLi.removceClass("active");
+			});
+			$this.addClass("active");
+		});
+	};
+</script>
