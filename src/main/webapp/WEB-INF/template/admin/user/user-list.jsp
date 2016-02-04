@@ -46,9 +46,6 @@
 				</table>
 			</div>
 		</div>
-		<br />
-		<br />
-		</section>
 	</body>
 	<script type="text/javascript">
 		$(function(){

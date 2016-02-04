@@ -168,7 +168,7 @@
 					"<ul class='unstyled menu-item submenu'><ul></li>"		
 				);
 				$("#first-level-menu").append($li);
-				renderSubMenu(this.chilred,$li);
+				renderSubMenu(this.children,$li);
 				
 			})
 		});
