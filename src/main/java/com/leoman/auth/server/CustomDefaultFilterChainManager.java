@@ -1,4 +1,4 @@
-package com.leoman.auth;
+package com.leoman.auth.server;
 
 import java.util.LinkedHashMap;
 import java.util.List;

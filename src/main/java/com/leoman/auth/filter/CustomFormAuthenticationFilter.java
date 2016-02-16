@@ -1,4 +1,4 @@
-package com.leoman.auth;
+package com.leoman.auth.filter;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;

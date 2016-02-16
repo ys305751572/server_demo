@@ -1,13 +1,15 @@
-package com.leoman.auth;
+package com.leoman.auth.listener;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import com.leoman.auth.CustomDefaultFilterChainManager;
-import com.leoman.auth.ShiroFilterChainManager;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
+
+import com.leoman.auth.server.CustomDefaultFilterChainManager;
+import com.leoman.auth.server.ShiroFilterChainManager;
 
 /**
  * 初始化Shiro过滤器链。
