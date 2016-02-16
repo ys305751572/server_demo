@@ -10,6 +10,8 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
@@ -21,7 +23,7 @@ import com.leoman.baisc.entity.BaseEntity;
 import com.leoman.role.entity.Role;
 
 @Entity
-@Table(name = "t_admin")
+@Table(name = "tb_admin")
 public class Admin extends BaseEntity {
 
 	private static final long serialVersionUID = -5371860404150636867L;
@@ -177,7 +179,7 @@ public class Admin extends BaseEntity {
 	 * @return 是否启用
 	 */
 	@NotNull
-	@Column(nullable = false)
+	@Column(nullable = false,name = "is_enabled")
 	public Boolean getIsEnabled() {
 		return isEnabled;
 	}
@@ -197,7 +199,7 @@ public class Admin extends BaseEntity {
 	 * 
 	 * @return 是否锁定
 	 */
-	@Column(nullable = false)
+	@Column(nullable = false, name = "is_locked")
 	public Boolean getIsLocked() {
 		return isLocked;
 	}
@@ -217,7 +219,7 @@ public class Admin extends BaseEntity {
 	 * 
 	 * @return 连续登录失败次数
 	 */
-	@Column(nullable = false)
+	@Column(nullable = false,name="login_failure_count")
 	public Integer getLoginFailureCount() {
 		return loginFailureCount;
 	}
@@ -237,6 +239,7 @@ public class Admin extends BaseEntity {
 	 * 
 	 * @return 锁定日期
 	 */
+	@Temporal(TemporalType.DATE)
 	public Date getLockedDate() {
 		return lockedDate;
 	}
@@ -256,6 +259,8 @@ public class Admin extends BaseEntity {
 	 * 
 	 * @return 最后登录日期
 	 */
+	@Temporal(TemporalType.DATE)
+	@Column(name="login_date")
 	public Date getLoginDate() {
 		return loginDate;
 	}
@@ -275,6 +280,7 @@ public class Admin extends BaseEntity {
 	 * 
 	 * @return 最后登录IP
 	 */
+	@Column(name="login_ip")
 	public String getLoginIp() {
 		return loginIp;
 	}
