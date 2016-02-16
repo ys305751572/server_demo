@@ -14,13 +14,18 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.leoman.admin.entity.Admin;
+import com.leoman.admin.service.IAdminService;
 import com.leoman.auth.entity.ShiroUser;
 
 @Named("customAuthoringRealm")
 public class CustomAuthoringRealm extends AuthorizingRealm {
 
+	@Autowired
+	private IAdminService adminService;
+	
 	// 前线获取
 	@Override
 	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
@@ -42,7 +47,7 @@ public class CustomAuthoringRealm extends AuthorizingRealm {
 		if(token instanceof UsernamePasswordToken) {
 			toToken = (UsernamePasswordToken) token;
 		}
-		Admin admin = findAdmin(toToken.getPrincipal());
+		Admin admin = findAdmin((String) toToken.getPrincipal());
 		
 		ShiroUser shiroUser = new ShiroUser(admin.getId(),admin.getUsername(),admin.getPassword());
 		SimpleAuthenticationInfo result = new SimpleAuthenticationInfo(shiroUser, admin.getPassword(), getName());
@@ -50,9 +55,7 @@ public class CustomAuthoringRealm extends AuthorizingRealm {
 		return result;
 	}
 
-	
-	
-	private Admin findAdmin(Object principal) {
-		return null;
+	private Admin findAdmin(String username) {
+		return adminService.findByUsername(username);
 	}
 }
