@@ -1,4 +1,4 @@
-package com.leoman.auth.server;
+package com.leoman.auth.service;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;
@@ -21,6 +21,9 @@ public class ShiroFilterChainManager {
 
 	@Inject
 	private DefaultFilterChainManager filterChainManager;
+
+	@Inject
+	private SecurityAccessFacade securityAccessFacade;
 
 	private Map<String, NamedFilterList> defaultFilterChains;
 

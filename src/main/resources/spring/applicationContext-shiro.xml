@@ -26,7 +26,7 @@
 		<property name="loginUrl" value="/login.jhtml"></property>
 	</bean>
 
-	<bean id="anyRoleFilter" class="org.openkoala.security.shiro.filter.AnyRoleAuthorizationFilter"></bean>
+	<bean id="anyRoleFilter" class="com.leoman.auth.filter.AnyRoleAuthorizationFilter"></bean>
 	
 	<!-- 自定义过滤器链管理 -->
 	<bean id="filterChainManager" class="com.leoman.auth.CustomDefaultFilterChainManager">

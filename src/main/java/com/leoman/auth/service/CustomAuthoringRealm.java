@@ -1,4 +1,4 @@
-package com.leoman.auth.server;
+package com.leoman.auth.service;
 
 import java.util.ArrayList;
 import java.util.List;
