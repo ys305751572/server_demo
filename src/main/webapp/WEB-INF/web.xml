@@ -15,7 +15,7 @@
 	</context-param>
 
 	<listener>
-		<listener-class>org.openkoala.security.listener.SystemEvenmentListener</listener-class>
+		<listener-class>com.leoman.auth.listener.SystemEvenmentListener</listener-class>
 	</listener>
 
 	<filter>

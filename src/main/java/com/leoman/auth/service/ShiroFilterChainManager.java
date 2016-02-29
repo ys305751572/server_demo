@@ -14,6 +14,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
+import com.leoman.auth.vo.UrlAuthorityVO;
+
 @Named("shiroFilterChainManager")
 public class ShiroFilterChainManager {
 
@@ -23,7 +25,7 @@ public class ShiroFilterChainManager {
 	private DefaultFilterChainManager filterChainManager;
 
 	@Inject
-	private SecurityAccessFacade securityAccessFacade;
+	private SecurityAccessService securityAccessService;
 
 	private Map<String, NamedFilterList> defaultFilterChains;
 
@@ -35,12 +37,12 @@ public class ShiroFilterChainManager {
 
 	// @PostConstruct
 	public void initFilterChain() {
-		List<UrlAuthorityDTO> results = securityAccessFacade.findAllUrlAccessResources();
+		List<UrlAuthorityVO> results = securityAccessService.findUrlAccessResource();
 		LOGGER.info("initFilterChain:{}", results);
 		initFilterChains(results);
 	}
 
-	public void initFilterChains(List<UrlAuthorityDTO> urlAccessResources) {
+	public void initFilterChains(List<UrlAuthorityVO> urlAccessResources) {
 		// 1、首先删除以前老的filter chain并注册默认的
 		filterChainManager.getFilterChains().clear();
 		if (defaultFilterChains != null) {
@@ -49,9 +51,9 @@ public class ShiroFilterChainManager {
 		
 		if (!urlAccessResources.isEmpty()) {
 			// 2、循环URL Filter 注册filter chain
-			for (UrlAuthorityDTO urlAuthority : urlAccessResources) {
+			for (UrlAuthorityVO urlAuthority : urlAccessResources) {
 				String url = urlAuthority.getUrl();
-				LOGGER.info("roles:{},permissions:{}",urlAuthority.getRoles(),urlAuthority.getPermissions());
+				LOGGER.info("roles:{},permissions:{}",urlAuthority.getRoles(),urlAuthority.getResources());
 				if (StringUtils.hasText(url)) {
 					// 注册roles filter
 					if (!urlAuthority.getRoles().isEmpty()) {
@@ -59,9 +61,9 @@ public class ShiroFilterChainManager {
 						filterChainManager.addToChain(url, "anyRole", listToString(urlAuthority.getRoles()));
 					}
 					// 注册perms filter
-					if (!urlAuthority.getPermissions().isEmpty()) {
-						filterChainManager.addToChain(url, "perms", listToString(urlAuthority.getPermissions()));
-					}
+//					if (!urlAuthority.getPermissions().isEmpty()) {
+//						filterChainManager.addToChain(url, "perms", listToString(urlAuthority.getPermissions()));
+//					}
 				}
 			}
 		}

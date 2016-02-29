@@ -5,7 +5,7 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd"
 	default-lazy-init="true">
 
-	<bean id="customAuthoringRealm" class="org.openkoala.security.shiro.realm.CustomAuthoringRealm">
+	<bean id="customAuthoringRealm" class="com.leoman.auth.service.CustomAuthoringRealm">
 		<property name="cachingEnabled" value="false" />
 	</bean>
 	
@@ -18,7 +18,7 @@
         <property name="arguments" ref="securityManager"/>
     </bean>
 	
-		<bean id="formAuthenticationFilter" class="com.leoman.auth.CustomFormAuthenticationFilter">
+		<bean id="formAuthenticationFilter" class="com.leoman.auth.filter.CustomFormAuthenticationFilter">
 		<property name="usernameParam" value="username" />
 		<property name="passwordParam" value="password" />
 		<property name="rememberMeParam" value="rememberMe" />
@@ -29,7 +29,7 @@
 	<bean id="anyRoleFilter" class="com.leoman.auth.filter.AnyRoleAuthorizationFilter"></bean>
 	
 	<!-- 自定义过滤器链管理 -->
-	<bean id="filterChainManager" class="com.leoman.auth.CustomDefaultFilterChainManager">
+	<bean id="filterChainManager" class="com.leoman.auth.service.CustomDefaultFilterChainManager">
 		<property name="loginUrl" value="/login.koala" />
 		<property name="successUrl" value="/"/>
 		<property name="unauthorizedUrl" value="/unauthorized.koala" />
@@ -55,7 +55,7 @@
 		</property>
 	</bean>
 	
-	<bean id="filterChainResolver" class="com.leoman.auth.CustomPathMatchingFilterChainResolver">
+	<bean id="filterChainResolver" class="com.leoman.auth.service.CustomPathMatchingFilterChainResolver">
 		 <property name="customDefaultFilterChainManager" ref="filterChainManager"/>
 	</bean>
 	

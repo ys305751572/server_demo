@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.leoman.admin.entity.Admin;
 import com.leoman.admin.service.IAdminService;
+import com.leoman.auth.entity.Role;
 import com.leoman.auth.entity.ShiroUser;
 
 @Named("customAuthoringRealm")
@@ -34,8 +35,11 @@ public class CustomAuthoringRealm extends AuthorizingRealm {
 		// TODO	 根据用户信息查找用户所有权限
 		
 		List<String> authorities = new ArrayList<String>();
+		List<String> roles = new ArrayList<String>();
+		
 		SimpleAuthorizationInfo result = new SimpleAuthorizationInfo();
 		result.addStringPermissions(authorities);
+		result.addRoles(roles);
 		return result;
 	}
 
@@ -51,7 +55,6 @@ public class CustomAuthoringRealm extends AuthorizingRealm {
 		
 		ShiroUser shiroUser = new ShiroUser(admin.getId(),admin.getUsername(),admin.getPassword());
 		SimpleAuthenticationInfo result = new SimpleAuthenticationInfo(shiroUser, admin.getPassword(), getName());
-		
 		return result;
 	}
 
