@@ -11,7 +11,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import com.leoman.listener.EntityListener;
+import com.leoman.baisc.listener.EntityListener;
 
 @MappedSuperclass
 @EntityListeners(EntityListener.class)
