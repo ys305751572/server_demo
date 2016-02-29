@@ -19,8 +19,8 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.leoman.auth.entity.Role;
 import com.leoman.baisc.entity.BaseEntity;
-import com.leoman.role.entity.Role;
 
 @Entity
 @Table(name = "tb_admin")
