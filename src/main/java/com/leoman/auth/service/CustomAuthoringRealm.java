@@ -18,7 +18,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.leoman.admin.entity.Admin;
 import com.leoman.admin.service.IAdminService;
-import com.leoman.auth.entity.Role;
 import com.leoman.auth.entity.ShiroUser;
 
 @Named("customAuthoringRealm")
